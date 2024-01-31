@@ -1,0 +1,25 @@
+@import '../main.scss';
+
+.bread{
+    &__box{
+        padding: 10px 0px;
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .item{
+            display: flex;
+            align-items: center;
+            &__box{
+                color: #7D7D7D;
+                font-size: 14px;
+                font-weight: 400;
+            }
+            &__arr{
+                display: flex;
+                padding-left: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,227 @@
+@import '../../main.scss';
+@import '@splidejs/vue-splide/css';
+
+.productCard{
+    position: absolute;
+    &__box{
+        padding: 25px;
+        border-radius: 30px;
+        background: linear-gradient(98deg, #FFF 0%, #FFF 100%);
+        border: 1px solid #EDEDED;
+        // position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        @include tr(.2s);
+        &:hover{
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09) inset;
+            border-color: #ffffff;
+            .productCard__extra{
+                max-height: 50px;
+            }
+        }
+    }
+    /* ====================================================================== */
+    /* Top Section */
+    /* ====================================================================== */
+    &__top{
+        padding-bottom: 10px;
+        position: relative;
+    }
+    &__img{
+        display: flex;
+        justify-content: center;
+        .splide{
+            a{
+                img{
+                    width: 100%;
+                }
+            }
+            &__pagination{
+                bottom: 10px;
+                background-color: #F3F3F3;
+                border-radius: 10px;
+                margin: auto;
+                width: fit-content;
+                padding: 0;
+                li{
+                    line-height: 0;
+                }
+                &__page{
+                    background-color: #fff;
+                    opacity: 1;
+                    margin: 2px;
+                    &.is-active{
+                        transform: none;
+                        background-color: $colorYellow;
+                    }
+                }
+            }
+        }
+    }
+    &__discount{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: $colorRed;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 190%;
+        width: 45px;
+        height: 45px;
+        @include df-aic-jcc;
+        border-radius: 50%;
+    }
+    /* ====================================================================== */
+    /* Bottom Section */
+    /* ====================================================================== */
+    &__bot{
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        position: relative;
+    }
+    &__title{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 180%;
+        @include tr(.2s);
+        @include oh(2);
+        &:hover{
+            color: $colorYellow;
+        }
+    }
+    &__cat{
+        color: #454545;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 180%;
+        @include tr(.2s);
+        &:hover{
+            color: #000;
+        }
+    }
+    &__old{
+        color: #7D7D7D;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 180%;
+        text-decoration: line-through;
+    }
+    &__new{
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 32px;
+        margin-top: auto;
+        span{
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+    &__extra{
+        max-height: 0px;
+        overflow: hidden;
+        @include tr(.2s);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    &__quant{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__cart{
+        padding: 10px;
+        border-radius: 50%;
+        background-color: $colorYellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ====================================================================== */
+    /* Desktop 1366 */
+    /* ====================================================================== */
+    @media (max-width: 1366px) {
+        &__box{
+            padding: 20px;
+        }
+        &__discount{
+            font-size: 14px;
+            width: 35px;
+            height: 35px;
+        }
+        &__title{
+            font-size: 16px;
+            line-height: 150%;
+        }
+        &__cat, &__old{
+            font-size: 12px;
+        }
+        &__new{
+            font-size: 24px;
+        }
+    }
+
+    /* ====================================================================== */
+    /* Tablet 768 */
+    /* ====================================================================== */
+    @media (max-width: 768px) {
+        &__box{
+            border-radius: 20px;
+            padding: 15px;
+        }
+        &__title{
+            font-size: 14px;
+            line-height: 120%;
+        }
+        &__new{
+            font-size: 18px;
+            line-height: 24px;
+            span{
+                font-size: 12px;
+            }
+        }
+    }
+
+    /* ====================================================================== */
+    /* Mobile 500 */
+    /* ====================================================================== */
+    @media (max-width: 500px) {
+        &__box{
+            padding: 10px;
+        }
+        
+        &__cat, &__old{
+            font-size: 10px;
+        }
+        &__new{
+            font-size: 16px;
+        }
+        &__quant{
+            gap: 8px;
+            &__down, &__up{
+                svg{
+                    width: 12px;
+                }
+            }
+            &__cur{
+                font-size: 12px;
+            }
+        }
+        &__cart{
+            padding: 8px;
+            border-radius: 50%;
+            background-color: $colorYellow;
+            svg{
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+}

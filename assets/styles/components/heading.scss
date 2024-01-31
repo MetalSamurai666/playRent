@@ -1,0 +1,66 @@
+@import '../main.scss';
+
+.heading{
+    &__title{
+        font-family: Jost;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 34px;
+    }
+    &__bot{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 40px;
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        .item{
+            &__box{
+                border-radius: 36px;
+                background: #FFF;
+                box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10) inset;
+                color: #7D7D7D;
+                text-align: center;
+                font-family: 'Roboto';
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+        }
+    }
+    &__reset{
+        text-decoration: underline;
+        font-size: 16px;
+    }
+
+
+    /* ====================================================================== */
+    /* Mobile 500 */
+    /* ====================================================================== */
+    @media (max-width: 768px) {
+        &__title{
+            font-size: 26px;
+        }
+        &__bot{
+            padding-top: 20px;
+            align-items: start;
+            gap: 15px;
+        }
+        &__list{
+            gap: 10px;
+            flex-wrap: wrap;
+            .item{
+                &__box{
+                    font-size: 12px;
+                    padding: 5px 15px;
+                }
+            }
+        }
+        &__reset{
+            font-size: 12px;
+        }
+    }
+}

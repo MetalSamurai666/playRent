@@ -1,0 +1,134 @@
+@import '../main.scss';
+
+.footer{
+    background-color: #F8F8F8;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 155%;
+    &__box{
+        padding: 65px 0px 55px;
+    }
+    &__bot{
+        padding-top: 25px;
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        .item{
+            flex-basis: 25%;
+            width: 25%;
+            &__title{
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 120%;
+                margin-bottom: 30px;
+            }
+            &__socials{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin: 40px 0px 20px;
+                .subItem{
+                    a{
+                        background-color: $colorGreen;
+                        @include df-aic-jcc;
+                        border-radius: 50%;
+                        width: 30px;
+                        height: 30px;
+                        @include tr(.2s);
+                        &:hover{
+                            background-color: darken($colorGreen, 5%);
+                        }
+                    }
+                }
+            }
+            &__link{
+                text-decoration: underline;
+            }
+            &__list{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px 10px;
+                .subItem{
+                    position: relative;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        top: 0;
+                        right: -5px;
+                        margin: auto;
+                        width: 1px;
+                        height: 15px;
+                        background-color: #ccc;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* ====================================================================== */
+    /* Desktop 1366 */
+    /* ====================================================================== */
+    @media (max-width: 1366px) {
+        &__box{
+            padding: 30px 0px;
+        }
+        &__list{
+            gap: 30px;
+            .item{
+                &__link{
+                    font-size: 12px;
+                }
+                &__title{
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                }
+                &__list{
+                    gap: 10px;
+                    .subItem{
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                }
+                &__hyper{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+
+    /* ====================================================================== */
+    /* Mobile 500 */
+    /* ====================================================================== */
+    @media (max-width: 500px) {
+        &__box{
+            padding: 20px 0px;
+        }
+        &__list{
+            flex-wrap: wrap;
+            gap: 20px;
+            .item{
+                flex-basis: unset;
+                width: 100%;
+                &__text{
+                    font-size: 14px;
+                }
+                &__socials{
+                    margin: 20px 0px 10px;
+                    gap: 10px;
+                }
+                &__title{
+                    margin-bottom: 10px;
+                }
+                &__list{
+                    gap: 5px 10px
+                }
+            }
+        }
+    }
+}

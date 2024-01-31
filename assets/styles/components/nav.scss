@@ -1,0 +1,26 @@
+.nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F8F8F8;
+    z-index: 25;
+    padding: 15px 50px;
+    &__list{
+        @include df-aic-jcsb;
+        .item{
+            margin: -10px;
+            &__link{
+                padding: 10px;
+                display: block;
+                &.router-link-active.router-link-exact-active{
+                    background-color: $colorYellow;
+                    border-radius: 10px;
+                    svg{
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+        }
+    }
+}

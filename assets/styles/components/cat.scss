@@ -1,0 +1,147 @@
+@import '../main.scss';
+
+.cat{
+    &__box{
+        padding: 30px 0px;
+    }
+    &__head{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 40px;
+    }
+    &__title{
+        font-family: 'Jost';
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 95%;
+        display: flex;
+        align-items: flex-end;
+    }
+    &__label{
+        font-family: 'Jost';
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 95%;
+        margin-left: 10px;
+        color: $colorRed;
+    }
+    &__link{
+        font-size: 18px;
+        font-weight: 400;
+        margin-left: 20px;
+        line-height: 140%;
+        svg{
+            @include tr(.2s);
+        }
+        &:hover{
+            svg{
+                transform: translateX(5px);
+            }
+        }
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+        &.prdcts{
+            grid-template-columns: repeat(4, 1fr);
+            .item{
+                position: relative;
+                height: 500px;
+            }
+        }
+        
+    }
+    @media (max-width: 1440px) {
+        &__list{
+            &.prdcts{
+                .item{
+                    height: 460px;
+                }
+            }
+        }
+    }
+
+    /* ====================================================================== */
+    /* Desktop 1366 */
+    /* ====================================================================== */
+    @media (max-width: 1366px) {
+        &__head{
+            margin-bottom: 30px;
+        }
+        &__title, &__label{
+            font-size: 32px;
+        }
+        &__link{
+            a{
+                font-size: 15px;
+            }
+        }
+        &__list{
+            gap: 15px;
+            &.prdcts{
+                .item{
+                    height: 400px;
+                }
+            }
+        }
+    }
+    /* ====================================================================== */
+    /* Tablet 768 */
+    /* ====================================================================== */
+    @media (max-width: 768px) {
+        &__box{
+            padding: 20px 0px;
+        }
+        &__list{
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            &.prdcts{
+                .item{
+                    height: 340px;
+                }
+            }
+        }
+    }
+
+    /* ====================================================================== */
+    /* Mobile 500 */
+    /* ====================================================================== */
+    @media (max-width: 500px) {
+        &__box{
+            padding: 20px 0px;
+        }
+        &__head{
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        &__title{
+            font-size: 20px;
+            max-width: 70%;
+        }
+        &__label{
+            font-size: 20px;
+        }
+        &__link{
+            margin-left: 0;
+            a{
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                span{
+                    margin-left: 10px;
+                }
+            }
+        }
+        &__list{
+            grid-template-columns: repeat(2, 1fr);
+            &.prdcts{
+                grid-template-columns: repeat(2, 1fr);
+                .item{
+                    height: 290px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+@import './reset.scss';
+// @import './lib/mixins.scss';
+// @import './lib/colors.scss';
+
+/* ========================================================================== */
+/* Fonts */
+/* ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jost:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* ========================================================================== */
+/* Main Settings */
+/* ========================================================================== */
+body{
+    font-family: 'Roboto', sans-serif;
+    &.noscroll{
+        overflow-y: hidden;
+    }
+}
+*, button{
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+button{
+    background: 0;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+}
+// ::selection{
+//     background-color: $colorRed;
+//     color: #fff;
+// }
+
+
+/* ========================================================================== */
+/* Scrollbar */
+/* ========================================================================== */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background-color: #e3e3e3;
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: darken( #ccc, 5%); 
+}
+
+
+/* ========================================================================== */
+/* Containers */
+/* ========================================================================== */
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
+    @media (max-width: 1440px) {
+        max-width: 1140px;
+    }
+    @media (max-width: 1280px) {
+        max-width: 1080px;
+    }
+    @media (max-width: 1024px) {
+        max-width: 100%;
+        padding: 0px 20px;
+    }
+    @media (max-width: 500px) {
+        max-width: 100%;
+        padding: 0px 10px;
+    }
+}
+
+.container-m{
+    max-width: 1375px;
+    width: 100%;
+    margin: auto;
+    @media (max-width: 1440px) {
+        max-width: 1175px;
+    }
+    @media (max-width: 1366px) {
+        max-width: 1080px;
+    }
+    @media (max-width: 1280px) {
+        max-width: 1075px;
+    }
+    @media (max-width: 1024px) {
+        max-width: 100%;
+        padding: 0px 20px;
+    }
+    @media (max-width: 500px) {
+        max-width: 100%;
+        padding: 0px 10px;
+    }
+}
+
+.container-l{
+    max-width: 1070px;
+    width: 100%;
+    margin: auto;
+    @media (max-width: 1440px) {
+        max-width: 900px;
+    }
+    @media (max-width: 1280px) {
+        max-width: 800px;
+    }
+    @media (max-width: 1024px) {
+        max-width: 100%;
+        padding: 0px 20px;
+    }
+    @media (max-width: 500px) {
+        max-width: 100%;
+        padding: 0px 10px;
+    }
+}
