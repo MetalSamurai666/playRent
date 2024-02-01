@@ -6,6 +6,7 @@
     background-color: #F8F8F8;
     z-index: 25;
     padding: 15px 50px;
+    display: none;
     &__list{
         @include df-aic-jcsb;
         .item{
@@ -22,5 +23,9 @@
                 }
             }
         }
+    }
+
+    @media (max-width: 500px) {
+        display: block;
     }
 }
