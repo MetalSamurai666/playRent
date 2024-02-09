@@ -11,15 +11,13 @@
                 <div class="cat__head" v-if="cat?.title">
                     <div class="cat__title">
                         {{ cat?.title }}
-
+                        
                         <div class="cat__label" v-if="cat?.label">
                             {{ cat?.label }}
                         </div>
                     </div>
 
-                    
-
-                    <div class="cat__link">
+                    <div class="cat__link" v-if="cat?.link">
                         <NuxtLink :to="cat?.link">Все категории <span><Icon name="bi:arrow-right" color="#5A5A5A" size="15"/></span> </NuxtLink>
                     </div>
                 </div>

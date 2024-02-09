@@ -17,6 +17,17 @@
             }
         }
     }
+
+    const searchVal = ref('')
+    const searchActive = ref(false)
+
+    function searchFoc() {
+        searchActive.value = true
+    }
+    function searchFocNot() {
+        searchActive.value = false
+    }
+    
 </script>
 
 <template>
@@ -41,12 +52,31 @@
                 <div class="header-bot__right">
                     <div class="header-bot__search">
                         <div class="header-bot__search__input">
-                            <input type="text">
+                            <input type="text" v-model="searchVal" @focus="searchFoc" @focusout="searchFocNot">
                         </div>
-                        <div class="header-bot__search__btn">
+                        <div :class="searchActive ? 'header-bot__search__btn active' : 'header-bot__search__btn'">
                             <button>
                                 <Icon name="bi:search" color="#5A5A5A" />
                             </button>
+                        </div>
+                        <div class="header-bot__search__results" v-if="searchVal.length > 0 && searchActive">
+                            <ul class="list">
+                                <li class="item">
+                                    <NuxtLink class="item__box" to="/">
+                                        <div class="item__img">
+                                            <img src="/prdcts/prdct.png">
+                                        </div>
+
+                                        <div class="item__text">
+                                            <div to="/" class="item__title">Title Fight</div>
+
+                                            <div class="item__cat">Мягкие игрушки</div>
+                                        </div>
+
+                                        <div class="item__price">16.669 сум/день</div>
+                                    </NuxtLink>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
@@ -78,4 +108,4 @@
 
 <style lang="scss">
 @import '@/assets/styles/components/header-bot.scss';
-</style>
+</style> 

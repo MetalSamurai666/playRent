@@ -1,0 +1,11 @@
+.cart-card{
+    &__box{
+        display: flex;
+        gap: 35px;
+    }
+    &__img{
+        img{
+            width: 175px;
+        }
+    }
+}

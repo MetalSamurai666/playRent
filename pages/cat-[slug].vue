@@ -3,7 +3,7 @@
         list: [
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/product-1',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',

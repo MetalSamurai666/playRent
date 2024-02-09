@@ -55,7 +55,7 @@ const cats = useState('cats', () => [
                             </NuxtLink>
                         </li>
                         <li class="item">
-                            <NuxtLink to="/">
+                            <NuxtLink to="/cart">
                                 <Icon name="bi:cart" color="black" />
                             </NuxtLink>
                         </li>

@@ -1,0 +1,212 @@
+@import '@splidejs/vue-splide/css';
+
+.overview{
+    &__box{
+        padding: 40px 0px;
+        display: flex;
+        gap: 30px;
+    }
+    /* ====================================================================== */
+    /* Left Section */
+    /* ====================================================================== */
+    &__left{
+        flex-basis: 58%;
+        width: 58%;
+    }
+    &__main{
+        .splide{
+            &__box{
+                background-color: #F6F6F6;
+                width: 100%;
+                height: 100%;
+                @include df-aic-jcc;
+                padding: 95px;
+                img{
+                    aspect-ratio: 1 / 1;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &__thumb{
+        margin-top: 20px;
+        .splide{
+            &__slide{
+                img{
+                    aspect-ratio: 1 / 1;
+                    width: 100%;
+                }
+            }
+            &__box{
+                background-color: #F6F6F6;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                @include df-aic-jcc;
+                @include tr(.2s);
+            }
+            .splide__list{
+                .splide__slide{
+                    border: 0;
+                    &.is-active{
+                        border: 0;
+                        .splide__box{
+                            background-color: #dadada;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* ====================================================================== */
+    /* Right Section */
+    /* ====================================================================== */
+    &__right{
+        line-height: 32px;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 24px;
+    }
+    &__art{
+        font-size: 18px;
+    }
+    &__info{
+        font-size: 18px;
+        color: #7d7d7d;
+    }
+    &__price{
+        display: flex;
+        margin: 25px 0px 10px;
+        &__daily{
+            font-size: 32px;
+            font-weight: 700;
+            span{
+                font-size: 18px;
+            }
+        }
+        &__quant{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-left: 80px;
+        }
+        &__cur{
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    &__btns{
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        &__cart{
+            background-color: $colorYellow;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            color: #fff;
+            width: 100%;
+            height: 55px;
+            border-radius: 32px;
+            @include tr(.2s);
+            &:hover{
+                background-color: darken($colorYellow, 5%);
+            }
+        }
+        &__more{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            .item{
+                button{
+                    width: 54px;
+                    height: 54px;
+                    border-radius: 50%;
+                    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05) inset;
+                    @include tr(.2s);
+                    &:hover{
+                        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08) inset;
+                    }
+                }
+            }
+        }
+    }
+    &__text{
+        margin: 40px 0px 20px;
+        font-size: 18px;
+        color: #7d7d7d;
+    }
+    &__collapse{
+        .item{
+            &__title{
+                font-size: 18px;
+            }
+        }
+    }
+
+    /* ====================================================================== */
+    /* Tablet 768 */
+    /* ====================================================================== */
+    @media (max-width: 768px) {
+        &__box{
+            flex-direction: column;
+        }
+        &__left{
+            flex-basis: unset;
+            width: 100%;
+        }
+        &__main{
+            .splide{
+                &__box{
+                    padding: 15px;
+                }
+            }
+        }
+        &__thumb{
+            margin-top: 10px;
+            .splide{
+                &__box{
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    /* ====================================================================== */
+    /* Mobile 500 */
+    /* ====================================================================== */
+    @media (max-width: 500px) {
+        &__box{
+            padding: 20px 0px;
+            gap: 20px;
+        }
+        &__right{
+            line-height: 26px;
+        }
+        &__art, &__info, &__text{
+            font-size: 15px;
+        }
+        &__price{
+            justify-content: space-between;
+        }
+        &__btns{
+            gap: 10px;
+            &__more{
+                gap: 10px;
+            }
+        }
+        &__text{
+            margin: 10px 0px;
+        }
+        &__collapse{
+            .item{
+                &__title{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

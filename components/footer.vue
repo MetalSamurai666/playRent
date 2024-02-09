@@ -191,7 +191,7 @@
                         <div class="item">
                             <div class="item__title">Контакты</div>
 
-                            <a class="item__hyper" href="#">г.Ташкент <br> br Ул. Диёр, Д. 13, Кв. 44</a>
+                            <a class="item__hyper" href="#">г.Ташкент <br> Ул. Диёр, Д. 13, Кв. 44</a>
                             <a class="item__hyper" href="#">+ 998 99 111 22 33</a>
                             <a class="item__hyper" href="#">+ 998 99 111 22 33</a>
                             <a class="item__hyper" href="#">playrent@gmail.com</a>
