@@ -1,4 +1,29 @@
 <script setup>
+  const menuState = useState('menuState')
+  const searchState = useState('searchState')
+
+
+  watch(
+    () => menuState.value,
+    () => {
+      if (menuState.value) {
+        document.body.classList.add('noscroll')
+      } else {
+        document.body.classList.remove('noscroll')
+      }
+    }
+  )
+
+  watch(
+    () => searchState.value,
+    () => {
+      if (searchState.value) {
+        document.body.classList.add('noscroll')
+      } else {
+        document.body.classList.remove('noscroll')
+      }
+    }
+  )
 </script>
 
 <template>
@@ -18,13 +43,4 @@
     opacity: 0;
     filter: blur(1rem);
   }
-
-  // .layout-enter-active,
-  // .layout-leave-active {
-  //   transition: all 0.3s;
-  // }
-  // .layout-enter-from,
-  // .layout-leave-to {
-  //   filter: blur(1rem);
-  // }
 </style>

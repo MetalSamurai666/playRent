@@ -4,16 +4,20 @@
         window.onscroll = function() {
             if (window.scrollY > scrollTrigger || window.pageYOffset > scrollTrigger) {
                 document.querySelector('.header-bot').classList.add('alt');
+                document.querySelector('.menu').classList.add('alt');
             } else {
                 document.querySelector('.header-bot').classList.remove('alt');
+                document.querySelector('.menu').classList.remove('alt');
             }
         }
     } else {
         window.onscroll = function() {
             if (window.scrollY > scrollTrigger || window.pageYOffset > scrollTrigger) {
                 document.querySelector('.header-bot').classList.add('mobile-alt');
+                document.querySelector('.menu').classList.add('alt');
             } else {
                 document.querySelector('.header-bot').classList.remove('mobile-alt');
+                document.querySelector('.menu').classList.remove('alt');
             }
         }
     }
@@ -28,6 +32,23 @@
         searchActive.value = false
     }
     
+    const menuState = useState('menuState', () => {false})
+    const headState = useState('headState', () => {false})
+
+    function doMenu() {
+        console.log('yes');
+        if (document.querySelector('.header-bot').classList.contains('alt')) {
+            headState.value = !headState.value
+        }
+        menuState.value = !menuState.value
+    }
+
+    watch(
+        () => menuState.value,
+        () => {
+            
+        }
+    )
 </script>
 
 <template>
@@ -44,7 +65,7 @@
                     </div>
 
                     <div class="header-bot__menu">
-                        <button>
+                        <button @click="doMenu">
                             <Icon name="bi:list" color="black" size="30"/>
                         </button>
                     </div>

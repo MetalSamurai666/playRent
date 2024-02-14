@@ -8,10 +8,11 @@
         <HeaderBot />
         <!-- <HeaderAlt /> -->
 
+        <Search />
         <Nav />
 
         <Filter />
-        <!-- <Menu /> -->
+        <Menu />
         <slot />
 
         <Footer />

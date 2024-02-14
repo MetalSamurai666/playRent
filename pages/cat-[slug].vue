@@ -9,6 +9,7 @@
                 old: '19 763',
                 new: '13 500',
                 discount: '69',
+                alt: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -26,6 +27,7 @@
                 old: '19 763',
                 new: '13 500',
                 discount: '69',
+                alt: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -43,6 +45,7 @@
                 old: '19 763',
                 new: '13 500',
                 discount: '69',
+                alt: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -60,6 +63,7 @@
                 old: '19 763',
                 new: '13 500',
                 discount: '69',
+                alt: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -77,6 +81,7 @@
                 old: '19 763',
                 new: '13 500',
                 discount: '69',
+                alt: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -94,6 +99,7 @@
                 old: '19 763',
                 new: '13 500',
                 discount: '69',
+                alt: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -111,6 +117,7 @@
                 old: '19 763',
                 new: '13 500',
                 discount: '69',
+                alt: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -128,6 +135,7 @@
                 old: '19 763',
                 new: '13 500',
                 discount: '69',
+                alt: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -145,6 +153,7 @@
                 old: '19 763',
                 new: '13 500',
                 discount: '69',
+                alt: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -162,6 +171,7 @@
                 old: '19 763',
                 new: '13 500',
                 discount: '69',
+                alt: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -179,6 +189,7 @@
                 old: '19 763',
                 new: '13 500',
                 discount: '69',
+                alt: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -196,6 +207,7 @@
                 old: '19 763',
                 new: '13 500',
                 // discount: '69',
+                alt: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'

@@ -11,7 +11,9 @@
         <div class="productCard__box">
             <div class="productCard__top">
                 <div class="productCard__img" >
-                    <Splide :options="{ 
+                    <div class="productCard__slide" v-if="card.alt == false">
+                        <Splide
+                        :options="{ 
                             rewind: true,
                             width: '100%',
                             gap: 0,
@@ -24,9 +26,8 @@
                                     width: 120
                                 },
                             }
-                        }" 
-                        aria-label="My Favorite Images"
-                        v-if="card.alt == false"
+                        }"
+                        
                     >
                         <!-- <SplideSlide v-for="item, idx of card?.imgs" :key="idx">
                             <img :src="item?.link">
@@ -41,7 +42,8 @@
                                 <img src="/prdcts/prdct.png">
                             </NuxtLink>
                         </SplideSlide>
-                    </Splide>
+                        </Splide>
+                    </div>
                     
                     <NuxtLink :to="card?.link" class="productCard__logo" v-if="card?.alt">
                         <!-- <img :src="card?.imgs[0]?.link"> -->

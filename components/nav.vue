@@ -1,3 +1,15 @@
+<script setup>
+
+    const searchState = useState('searchState')
+
+    function doSearch() {
+        searchState.value = !searchState.value
+    }
+
+
+    
+</script>
+
 <template>
     <div class="nav">
         <div class="nav__box">
@@ -8,12 +20,12 @@
                     </NuxtLink>
                 </li>
                 <li class="item">
-                    <button class="item__link">
+                    <button class="item__link" @click="doSearch">
                         <Icon name="bi:search" />
                     </button>
                 </li>
                 <li class="item">
-                    <NuxtLink to="/w" class="item__link">
+                    <NuxtLink to="/cart" class="item__link">
                         <Icon name="bi:cart" />
                     </NuxtLink>
                 </li>
@@ -31,9 +43,6 @@
         </div>
     </div>
 </template>
-
-<script setup>
-</script>
 
 <style lang="scss">
 @import '@/assets/styles/components/nav.scss';
