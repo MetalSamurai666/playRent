@@ -11,6 +11,7 @@
         <Search />
         <Nav />
 
+        <Checkout />
         <Filter />
         <Menu />
         <slot />

@@ -139,6 +139,9 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        &__cur{
+            font-weight: 700;
+        }
     }
     &__cart{
         padding: 10px;

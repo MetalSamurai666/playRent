@@ -1,7 +1,7 @@
 <script setup>
     const popular = ref({
         title: 'Популярные категории',
-        link: 'ass',
+        link: '',
         type: 'cat',
         list: [
             {
@@ -18,31 +18,31 @@
             },
             {
                 title: 'Конструкторы',
-                link: '/ass'
+                link: '/'
             },
             {
                 title: 'Конструкторы',
-                link: '/ass'
+                link: '/'
             },
             {
                 title: 'Конструкторы',
-                link: '/ass'
+                link: '/'
             },
             {
                 title: 'Конструкторы',
-                link: '/ass'
+                link: '/'
             },
             {
                 title: 'Конструкторы',
-                link: '/ass'
+                link: '/'
             },
             {
                 title: 'Конструкторы',
-                link: '/ass'
+                link: '/'
             },
             {
                 title: 'Конструкторы',
-                link: '/ass'
+                link: '/'
             },
         ]
     })
@@ -51,11 +51,12 @@
     const discounts = ref({
         title: 'Скидки',
         label: '%',
-        link: 'sas',
+        link: '',
         list: [
             {
+                _id: 1,
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -73,7 +74,7 @@
             },
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -91,7 +92,7 @@
             },
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -109,7 +110,7 @@
             },
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -131,11 +132,11 @@
 
     const popular_prdcts = ref({
         title: 'Популярное',
-        link: 'sas',
+        link: '',
         list: [
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -153,7 +154,7 @@
             },
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -171,7 +172,7 @@
             },
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -189,7 +190,7 @@
             },
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -211,11 +212,11 @@
 
     const stock = ref({
         title: 'Товары в наличии',
-        link: 'sas',
+        link: '',
         list: [
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -233,7 +234,7 @@
             },
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -251,7 +252,7 @@
             },
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -269,7 +270,7 @@
             },
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -287,7 +288,7 @@
             },
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -305,7 +306,7 @@
             },
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -323,7 +324,7 @@
             },
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',
@@ -341,7 +342,7 @@
             },
             {
                 title: 'Малыш Мандалорец Грогу Плюш',
-                link: '/ass',
+                link: '/',
                 cat: 'Мягкая игрушка',
                 catLink: '/sds',
                 old: '19 763',

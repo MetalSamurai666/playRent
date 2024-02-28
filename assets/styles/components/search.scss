@@ -28,6 +28,11 @@
             border-radius: 10px 0px 0px 10px;
             font-size: 15px;
             padding: 0px 15px;
+            @include tr(.2s);
+            &:focus{
+                outline: 0;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05) inset;
+            }
         }
         button{
             flex-basis: 10%;

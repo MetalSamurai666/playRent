@@ -3,6 +3,10 @@
         cart: Array,
         subcart: Array
     })
+
+    const checkState = useState('checkState')
+
+    // const cart = useState('cart', () => [])
 </script>
 
 <template>
@@ -55,7 +59,7 @@
                         <div class="cart-view__final">
                             <button class="cart-view__final__clear">Очистить корзину</button>
 
-                            <button class="cart-view__final__buy">Оформить заказ</button>
+                            <button class="cart-view__final__buy" @click="checkState = true">Оформить заказ</button>
                         </div>
                     </div>
                 </div>

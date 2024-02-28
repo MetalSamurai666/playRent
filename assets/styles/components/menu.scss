@@ -4,17 +4,23 @@
     top: 205px;
     background-color: rgb(255, 255, 255);
     @include tr(.2s);
-    z-index: 40;
+    z-index: 55;
     height: 0px;
     overflow: hidden;
     .container{
         height: 100%;
-        overflow-y: scroll;
     }
     &.show{
         height: calc(100vh - 205px);
+        overflow-y: scroll;
         &.alt, &.top{
             height: calc(100vh - 84px);
+        }
+        .menu__title{
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #fff;
         }
     }
     &.alt{
@@ -24,12 +30,14 @@
         top: 84px;
     }
     &__box{
-        padding: 40px 0px;
+        padding-bottom: 40px;
     }
     &__title{
         font-size: 36px;
         font-weight: 700;
         margin-bottom: 40px;
+        padding-top: 40px;
+        padding-bottom: 10px;
     }
     &__list{
         display: grid;
@@ -120,8 +128,24 @@
         &.top{
             top: 72px;
         }
+        &__title{
+            margin-bottom: 20px;
+            padding-top: 20px;
+            font-size: 26px;
+        }
         &__list{
             gap: 40px 20px;
+        }
+    }
+
+
+    @media (max-width: 500px) {
+        &__title{
+            font-size: 26px;
+        }
+        &__list{
+            gap: 20px;
+            grid-template-columns: 1fr 1fr;
         }
     }
 }

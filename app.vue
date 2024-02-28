@@ -1,7 +1,7 @@
 <script setup>
   const menuState = useState('menuState')
   const searchState = useState('searchState')
-
+  const checkState = useState('checkState')
 
   watch(
     () => menuState.value,
@@ -18,6 +18,17 @@
     () => searchState.value,
     () => {
       if (searchState.value) {
+        document.body.classList.add('noscroll')
+      } else {
+        document.body.classList.remove('noscroll')
+      }
+    }
+  )
+
+  watch(
+    () => checkState.value,
+    () => {
+      if (checkState.value) {
         document.body.classList.add('noscroll')
       } else {
         document.body.classList.remove('noscroll')

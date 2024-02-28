@@ -4,10 +4,20 @@
     defineProps({
         card: Object
     })
+
+    
+
+
+    const cart = useState('cart')
+
+    function addCart(id) {
+        console.log(card)
+    }
 </script>
 
 <template>
     <div :class="card?.alt ? 'productCard alt' : 'productCard'">
+        {{ curCar }}
         <div class="productCard__box">
             <div class="productCard__top">
                 <div class="productCard__img" >
@@ -120,7 +130,7 @@
                         </button>
                     </div>
 
-                    <button class="productCard__cart">
+                    <button class="productCard__cart" @click="addCart(card._id)">
                         <Icon name="bi:cart-plus" color="fff" size="24"/>
                     </button>
                 </div>
