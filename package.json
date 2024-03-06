@@ -18,8 +18,13 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
     "@splidejs/vue-splide": "^0.6.12",
+    "pinia": "^2.1.7",
     "sass": "^1.69.7",
     "sass-loader": "^13.3.3"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

@@ -8,7 +8,8 @@ export default defineNuxtConfig({
   ssr: false,
   modules: [
     'nuxt-icon',
-    '@element-plus/nuxt'
+    '@element-plus/nuxt',
+    '@pinia/nuxt'
   ],
   css: ['~/assets/styles/main.scss'],
   vite: {

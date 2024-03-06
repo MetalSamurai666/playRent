@@ -150,6 +150,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        &.alt{
+            pointer-events: none;
+            background-color: #a7a7a7;
+        }
     }
     /* ====================================================================== */
     /* Alt */
@@ -187,6 +191,11 @@
                 &__cur{
                     font-size: 18px;
                     font-weight: 700;
+                }
+                &__down{
+                    &.alt{
+                        pointer-events: none;
+                    }
                 }
             }
             &__title{
@@ -276,6 +285,27 @@
         &__new{
             font-size: 24px;
         }
+        &.alt{
+            .productCard__box{
+                gap: 20px;
+            }
+            .productCard__logo{
+                img{
+                    width: 150px;
+                }
+            }
+        }
+        &.small{
+            .productCard__top{
+                height: fit-content;
+                align-self: center;
+            }
+            .productCard__logo{
+                img{
+                    width: 100px;
+                }
+            }
+        }
     }
 
     /* ====================================================================== */
@@ -341,9 +371,13 @@
                         font-size: 16px;
                     }
                 }
+                &__top{
+                    height: fit-content;
+                    align-self: center;
+                }
                 &__logo{
                     img{
-                        width: 120px;
+                        width: 100px;
                     }
                 }
                 &__art{
@@ -359,7 +393,7 @@
                 }
                 &__del{
                     button{
-                        font-size: 16px;
+                        font-size: 14px;
                     }
                 }
             }

@@ -1,12 +1,22 @@
 <script setup>
+    import { storeToRefs } from 'pinia';
+    import { useCartsStore } from '~/stores/cart';
+
     defineProps({
-        cart: Array,
+        // cart: Array,
         subcart: Array
     })
 
+    const store = useCartsStore()
+    const { cart } = storeToRefs(store)
+
     const checkState = useState('checkState')
 
-    // const cart = useState('cart', () => [])
+
+    onMounted(()=>{
+        store.getCart()
+    })
+
 </script>
 
 <template>
@@ -21,9 +31,9 @@
                         <div class="cart-view__title">Корзина</div>
                         <NuxtLink to="/" class="cart-view__more">Добавить товар по артикулу</NuxtLink>
                     </div>
-
+                    
                     <div class="cart-view__body">
-                        <div class="cart-view__empty" v-if="cart.length === 0">
+                        <div class="cart-view__empty" v-if="!cart">
                             <div class="cart-view__empty__title">
                                 Добавьте товары в корзину, чтобы оформить заказ
                             </div>
@@ -39,8 +49,27 @@
                                 :key="item?._id"
                             >
                                 <CardsProductCard 
-                                    :card="item"
-                                />
+                                    :card="{
+                                        ...item,   
+                                        title: 'Хэппи Нурбек',
+                                        link: '/product-1',
+                                        cat: 'Мягкая игрушка',
+                                        catLink: '/sds',
+                                        old: '19 763',
+                                        new: '13 500',
+                                        discount: '69',
+                                        art: '890.321.44',
+                                        alt: true,
+                                        small: false, 
+                                        imgs: [
+                                            {
+                                                link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
+                                            },
+                                            {
+                                                link: 'https://ih1.redbubble.net/image.2968247867.2350/st,small,507x507-pad,600x600,f8f8f8.jpg'
+                                            },
+                                        ] }"
+                                    />
                             </li>
                         </ul>
 

@@ -144,11 +144,45 @@
         gap: 10px;
         margin-top: 40px;
     }
+    
+    @media (max-width: 1440px) {
+        &__list{
+            .item{
+                padding: 40px 0px;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__box{
+            gap: 40px;
+        }
+        &__title{
+            font-size: 32px;
+        }
+        &__more{
+            font-size: 16px;
+        }
+        &__subtitle{
+            font-size: 26px;
+        }
+        &__list{
+            .item{
+                padding: 20px 0px;
+            }
+        }
+        &__sublist{
+            .item{
+                padding: 15px 0px;
+            }
+        }
+    }
 
     @media (max-width: 768px) {
         &__box{
             flex-direction: column;
             gap: 50px;
+            padding: 20px 0px 40px;
         }
         &__list{
             .item{
@@ -164,6 +198,13 @@
                 padding: 20px 0px;
             }
         }
+        &__promo{
+            padding: 15px 0px;
+        }
+        &__overall{
+            padding: 20px 0px;
+            font-size: 26px;
+        }
     }
 
     @media (max-width: 500px) {
@@ -171,6 +212,13 @@
             flex-direction: column;
             gap: 30px;
             padding: 20px 0px;
+        }
+        &__title{
+            font-size: 26px;
+        }
+        &__more{
+            text-align: right;
+            font-size: 14px;
         }
         &__list{
             .item{
@@ -180,10 +228,19 @@
         &__promo{
             flex-wrap: wrap;
             padding: 15px 0px;
+            gap: 15px;  
+            &__title{
+                width: 100%;
+                font-size: 16px;
+            }
             &__input{
+                flex: 1;
                 input{
                     height: 40px;
                 }
+            }
+            &__apply{
+                font-size: 16px;
             }
         }
         &__overall{
@@ -191,8 +248,12 @@
             padding: 15px 0px;
         }
         &__final{
+            &__clear{
+                font-size: 14px;
+            }
             &__buy{
                 height: 40px;
+                font-size: 14px;
             }
         }
         &__right{
