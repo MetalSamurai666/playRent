@@ -47,7 +47,6 @@
         ]
     })
 
-
     const discounts = ref({
         title: 'Скидки',
         label: '%',
@@ -63,6 +62,7 @@
                 new: '13 500',
                 discount: '69',
                 alt: false,
+                fav: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -82,6 +82,7 @@
                 new: '13 500',
                 discount: '69',
                 alt: false,
+                fav: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -101,6 +102,7 @@
                 new: '13 500',
                 discount: '69',
                 alt: false,
+                fav: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -119,6 +121,7 @@
                 new: '13 500',
                 discount: '69',
                 alt: false,
+                fav: false,
                 imgs: [
                     {
                         link: 'https://ih1.redbubble.net/image.3856719538.4264/st,small,507x507-pad,600x600,f8f8f8.u2.jpg'
@@ -130,7 +133,6 @@
             },
         ]
     })
-
 
     const popular_prdcts = ref({
         title: 'Популярное',
@@ -210,7 +212,6 @@
             },
         ]
     })
-
 
     const stock = ref({
         title: 'Товары в наличии',
@@ -362,7 +363,6 @@
             },
         ]
     })
-
 </script>
 
 <template>

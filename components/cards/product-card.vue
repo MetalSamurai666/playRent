@@ -1,12 +1,14 @@
 <script setup>
     import { Splide, SplideSlide} from '@splidejs/vue-splide';
     import { useCartsStore } from '~/stores/cart';
+    import { useFavStore } from '~/stores/fav';
 
     const props = defineProps({
         card: Object
     })
 
     const store = useCartsStore()
+    const storeFav = useFavStore()
 
     const count = ref(0)
 
@@ -29,6 +31,15 @@
 
     function deleteCart() {
         store.deleteObjectById(props.card._id)
+    }
+
+    function addFav() {
+        if (props.card.fav) {
+            props.card.fav = false
+        } else {
+            props.card.fav = true
+        }
+        storeFav.addFav(props.card._id)
     }
 </script>
 
@@ -84,8 +95,17 @@
                         <Icon name="solar:fire-linear" color="#fff" />
                     </div>
                 </div>
-            </div>
 
+                <div class="productCard__fav">
+                    <button @click="addFav()">
+                        <Icon name="bi:star" color="#000" v-if="!card?.fav"/>
+                        <Icon name="bi:star-fill" color="#000" v-else/>
+                    </button>
+                </div>
+
+
+            </div>
+            {{ card.fav }}
             <div class="productCard__bot">
                 <div class="productCard__head">
                     <NuxtLink :to="card?.link" class="productCard__title">

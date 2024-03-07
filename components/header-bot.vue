@@ -104,7 +104,7 @@
                     <div class="header-bot__options">
                         <ul class="header__options">
                             <li class="item">
-                                <NuxtLink to="/">
+                                <NuxtLink to="/cat-fav">
                                     <Icon name="bi:star" color="black" />
                                 </NuxtLink>
                             </li>
