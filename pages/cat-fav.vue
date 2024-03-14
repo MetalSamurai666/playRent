@@ -93,11 +93,9 @@
 
     const xuy = ref([])
     const cats = discounts.value.list.map(item => {
-        // console.log(item)
         ids.forEach(item2 => {
-            // console.log(item2)
             if (item._id == item2) {
-                console.log(item._id, item2);
+                console.log(item._id, item2)
                 xuy.value.push(item)
             }
         })
@@ -110,6 +108,7 @@
     <div class="cat">
         <Bread />
         <Heading />
+        {{ favCookie }}
         <Cat :cat="{
             title: 'Скидки',
             label: '%',

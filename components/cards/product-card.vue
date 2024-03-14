@@ -3,6 +3,8 @@
     import { useCartsStore } from '~/stores/cart';
     import { useFavStore } from '~/stores/fav';
 
+    const favCookie = useCookie('favCookie') || []
+
     const props = defineProps({
         card: Object
     })
@@ -41,6 +43,18 @@
         }
         storeFav.addFav(props.card._id)
     }
+
+
+    const comFav = computed(() => {
+        return favCookie.value
+    })
+
+    const isFav = ref(false)
+    const reFav = comFav.value?.filter((item) => {
+        if (item === props.card?._id) {
+            isFav.value = true
+        }
+    })
 </script>
 
 <template>
@@ -96,16 +110,16 @@
                     </div>
                 </div>
 
-                <div class="productCard__fav">
+                <div :class="isFav ? 'productCard__fav fav' : 'productCard__fav'">
                     <button @click="addFav()">
-                        <Icon name="bi:star" color="#000" v-if="!card?.fav"/>
+                        <Icon name="bi:star" color="#000" v-if="!isFav"/>
                         <Icon name="bi:star-fill" color="#000" v-else/>
                     </button>
                 </div>
 
 
             </div>
-            {{ card.fav }}
+            {{ comFav }}
             <div class="productCard__bot">
                 <div class="productCard__head">
                     <NuxtLink :to="card?.link" class="productCard__title">
